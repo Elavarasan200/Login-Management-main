@@ -1,0 +1,113 @@
+.page-shell {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
+    url('https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&w=1600&q=80');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 24px;
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  z-index: 0;
+}
+
+.login-card,
+.dashboard-card {
+  position: relative;
+  z-index: 1;
+  width: min(100%, 430px);
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 12px;
+  padding: 40px 32px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+}
+
+.login-card h1,
+.dashboard-card h1 {
+  margin: 0 0 8px;
+  color: white;
+  font-size: 32px;
+}
+
+.subtitle,
+.dashboard-copy {
+  margin-bottom: 24px;
+  color: #b3b3b3;
+}
+
+.eyebrow {
+  margin: 0 0 8px;
+  color: #e50914;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 16px;
+}
+
+.field span {
+  font-size: 14px;
+  color: #e5e5e5;
+}
+
+.field input {
+  padding: 14px;
+  border-radius: 6px;
+  border: 1px solid #333;
+  background: #333;
+  color: white;
+  font-size: 16px;
+}
+
+.field input:focus {
+  outline: 2px solid #e50914;
+}
+
+.field small {
+  color: #e87c03;
+}
+
+button {
+  width: 100%;
+  margin-top: 8px;
+  padding: 14px;
+  border: none;
+  border-radius: 6px;
+  background: #e50914;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.feedback {
+  margin-top: 16px;
+  font-size: 14px;
+}
+
+.feedback.success {
+  color: #46d369;
+}
+
+.feedback.error {
+  color: #e87c03;
+}
+
+.helper-text {
+  margin-top: 16px;
+  color: #b3b3b3;
+  font-size: 14px;
+}
