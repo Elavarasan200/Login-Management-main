@@ -8,10 +8,11 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
     "dev:backend": "node server.js",
-    "build": "vite build",
-    "preview": "vite preview",
+    "dev": "concurrently \"npm run dev:backend\" \"npm --prefix frontend run dev\"",
+    "build": "npm --prefix frontend run build",
+    "preview": "npm --prefix frontend run preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d frontend/dist"
   },
   "keywords": [],
   "author": "",
@@ -23,6 +24,7 @@
     "express": "^5.2.1"
   },
   "devDependencies": {
+    "concurrently": "^9.1.2",
     "gh-pages": "^5.0.0"
   }
 }
